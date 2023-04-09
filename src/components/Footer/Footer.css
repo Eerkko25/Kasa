@@ -1,0 +1,29 @@
+.footer {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    text-align: center;
+    color: white;
+    gap: 30px;
+}
+
+.footer--text {
+    font-size: 0.75rem;
+}
+
+.footer--logo {
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px){
+    .footer {
+        gap: 40px;
+        padding: 60px 0 30px 0;
+    }
+
+    .footer--text {
+        font-size: 1.5rem;
+    }
+}

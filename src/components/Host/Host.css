@@ -1,0 +1,30 @@
+.host--wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100px;
+    gap: 10px;
+}
+
+.host--name {
+    text-align: right;
+    font-size: 0.75rem;
+    font-weight: inherit;
+}
+
+.host--image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 768px){
+    .host--name {
+        font-size: 1.125rem;
+    }
+
+    .host--image {
+        width: 64px;
+        height: 64px;
+    }
+}

@@ -1,0 +1,100 @@
+
+.collapsible {
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.collapsible--title-container {
+    height: 30px;
+    background-color: var(--main-pink);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.collapsible--icon {
+    height: 12px;
+}
+
+.rotate {
+    animation: rotate 0.3s forwards;
+}
+
+.collapsible--title {
+    color: white;
+    font-weight: 500;
+}
+
+.collapsible--description {
+    color: var(--main-pink);
+    font-size: 0.75rem;
+    font-weight: 400;
+    border-radius: 0 0 10px 10px;
+}
+
+.collapsible--description {
+    padding: 23px 12px;
+    background-color: var(--container-grey);
+    list-style: none;
+}
+
+
+.collapsible--li {
+    line-height: 17px;
+}
+
+.animate {
+    animation-duration: 0.3s;
+    animation-name: fade;
+    animation-fill-mode: backwards;
+  }
+  
+@keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes rotate {
+    from {
+      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    to {
+      -webkit-transform: rotate3d(0, 0, 1, 180deg);
+      transform: rotate3d(0, 0, 1, 180deg);
+    }
+  }
+
+@media screen and (min-width: 768px){
+    .collapsible {
+        font-size: 1.5rem; 
+        margin: 0 auto 30px auto;
+        width: 80%;
+    }
+
+    .collapsible--title-container {
+        height: 50px;
+        padding: 8px 18px;
+    }
+
+    .collapsible--icon {
+        height: 15px;
+    }
+
+    .collapsible--description {
+        padding: 30px 20px 20px 20px;
+    }
+
+    .collapsible--description {
+        font-size: 1.125rem;
+    }
+
+    .collapsible--li {
+        line-height: 26px;
+    }
+
+}

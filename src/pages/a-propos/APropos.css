@@ -1,0 +1,26 @@
+.a-propos {
+    animation: slide-in 0.8s;
+    min-height: 100vh;
+}
+
+section.a-propos img.hero--image {
+    height: 220px
+}
+
+@keyframes slide-in {
+    from {
+      transform: translateX(-50%);
+      opacity: 0;
+
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .a-propos--hero {
+        margin-bottom: 30px;
+    }
+}

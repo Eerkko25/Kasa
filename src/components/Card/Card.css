@@ -1,0 +1,98 @@
+
+article.card {
+    height: 255px;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.card--image {
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    filter:brightness(85%);
+    transition: 0.3s;
+}
+
+.card--image:hover {
+    filter: none;
+}
+
+.card--title {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 500;
+    position: absolute;
+    bottom: 0;
+    margin: 15px 20px;
+
+    /*added for text visibility*/
+    background: linear-gradient(180deg, #FF6060 0%, rgb(255, 96, 96, 0.5) 100%);
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-shadow: 0 0 50px black;
+}
+
+.card--link:nth-child(1) {
+    animation: slide-in-from-top-10 1s;
+}
+
+.card--link:nth-child(2) {
+    animation: slide-in-from-top-10 1.4s;
+}
+
+
+@keyframes slide-in-from-top-10 {
+    from {
+      transform: translateY(-10%);
+      opacity: 0;
+
+    }
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    section.home > a {
+        flex: 1 1 250px;
+    }
+    
+    article.card {
+        height: 340px;
+    }
+
+    .card--title {
+        margin: 20px;
+    }
+
+    .card--link:nth-child(1),
+    .card--link:nth-child(4) {
+        animation: slide-in-from-top-25 1s;
+    }
+    
+    .card--link:nth-child(2),
+    .card--link:nth-child(5) {
+        animation: slide-in-from-top-25 1.4s;
+    }
+    
+    .card--link:nth-child(3),
+    .card--link:nth-child(6) {
+        animation: slide-in-from-top-25 1.8s;
+    }
+
+    @keyframes slide-in-from-top-25 {
+        from {
+          transform: translateY(-10%);
+          opacity: 0;
+    
+        }
+        to {
+          transform: translateY(0%);
+          opacity: 1;
+        }
+    }
+
+}
